@@ -26,4 +26,7 @@ export class ProductService {
   create(product: Product): Observable<Product> { //retorna observable de produto
     return this.http.post<Product>(this.baseUrl, product) //como faz checagem de tipos, é preciso retornar tipo observable de produto
   }
+  read(): Observable<Product[]> { //irá ler uma array de produtos
+    return this.http.get<Product[]>(this.baseUrl) //retorna array de produtos
+  }
 }
