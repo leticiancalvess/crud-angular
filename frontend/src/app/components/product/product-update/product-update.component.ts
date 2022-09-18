@@ -14,7 +14,7 @@ export class ProductUpdateComponent implements OnInit {
   constructor(private productService: ProductService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id') as string // para resolver o erro Argument of type 'string | null' is not assignable to parameter of type 'string'.
+    const id = this.route.snapshot.paramMap.get('id') as string; // para resolver o erro Argument of type 'string | null' is not assignable to parameter of type 'string'.
     this.productService.readById(id).subscribe(product => {
       this.product = product
     });
