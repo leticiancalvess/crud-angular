@@ -15,7 +15,9 @@ const routes: Routes = [{
 {
   path: "products/create",
   component: ProductCreateComponent
-}];
+}
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

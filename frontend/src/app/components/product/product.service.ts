@@ -29,4 +29,8 @@ export class ProductService {
   read(): Observable<Product[]> { //irá ler uma array de produtos
     return this.http.get<Product[]>(this.baseUrl) //retorna array de produtos
   }
+  readById(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Product>(url)
+  }
 }
